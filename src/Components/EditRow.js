@@ -1,13 +1,12 @@
 import React from 'react'
 import SaveIcon from '@mui/icons-material/Save';
 import CancelIcon from '@mui/icons-material/Cancel';
-import { getRowsStateFromCache } from '@mui/x-data-grid/hooks/features/rows/gridRowsUtils';
 
 const EditRow = (props) => {
     const {row,setEditId,rows} = props
     let firstName=row.firstName
-    let secondName=row.secondName
-    let email=row.Email
+    let secondName=row.lastName
+    let email=row.email
     const saveChanges=()=>{
         rows.map((testRow)=>{
             if(testRow.id===row.id){
